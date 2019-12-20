@@ -42,11 +42,8 @@ func checkTwoSidePrime(value int) bool {
 		}
 		tmp = tmp / 10
 	}
-	if out {
-		return true
-	} else {
-		return false
-	}
+
+	return out
 }
 
 func isPrime(value int) bool {
