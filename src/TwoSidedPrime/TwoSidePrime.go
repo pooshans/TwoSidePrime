@@ -30,26 +30,22 @@ func checkTwoSidePrime(value int) bool {
 	if value == 0 || value == 1 {
 		return false
 	}
-	var a int = value
-	var tmp int = a
-	var out bool = true
+	var tmp int = value
 	var div int = 1
 	for tmp > 0 {
-		var rem int = tmp / (div * 10)
-		if !(isPrime(tmp)) || (rem != 0 && !(isPrime(rem))) {
-			out = false
-			break
+		var remainder int = tmp / (div * 10)
+		if !(isPrime(tmp)) || (remainder != 0 && !(isPrime(remainder))) {
+			return false
 		}
 		tmp = tmp / 10
 	}
 
-	return out
+	return true
 }
 
 func isPrime(value int) bool {
 	for i := 2; i <= int(math.Floor(float64(value)/2)); i++ {
 		if value%i == 0 {
-			//fmt.Println("NO for ",  value)
 			return false
 		}
 	}
