@@ -10,3 +10,6 @@ Once you run the program, you can either test the program in browser as `http://
 or can make curl request as
 `curl http://localhost:8082/twoSidePrime/<num>` i.e 
 `curl http://localhost:8082/twoSidePrime/37` . It will return `true` or `false` based on it's Two-sided prime or not. 
+### To Run test cases:
+1. Go to directory `TwoSidePrime/src/TwoSidedPrime`.
+2. Execute command `go test -v`.
